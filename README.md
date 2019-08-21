@@ -1,0 +1,2 @@
+# leetodeSolution-in-JS-easy
+ 
