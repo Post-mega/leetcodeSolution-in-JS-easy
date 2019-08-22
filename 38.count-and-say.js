@@ -22,13 +22,17 @@ var countAndSay = function (n) {
     if (n === 1) return '1'
     let next = '1'
     let re = /(1{1,}|2{1,}|3{1,}|4{1,}|5{1,}|6{1,}|7{1,}|8{1,}|9{1,})/g
+    // let re = /[\d+]+/g
     for (let i = 0; i < n - 1; i++) {
         let arr = next.match(re)
         next = ''
+        console.log(i, '--', arr)
         arr.forEach(item => {
             next += item.length + item.charAt(0)
         })
     }
+    console.log(next)
     return next
 };
 
+countAndSay(8)
